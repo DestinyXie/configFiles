@@ -1,0 +1,9 @@
+[user]
+    name = DestinyXie
+    email = xber1986@gmail.com
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
+    oneline = log --pretty=oneline
