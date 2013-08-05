@@ -7,3 +7,5 @@
     ci = commit
     st = status
     oneline = log --pretty=oneline
+[http]
+    postBuffer = 524288000
