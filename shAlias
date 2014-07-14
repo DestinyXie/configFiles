@@ -6,3 +6,7 @@ alias ll='ls -alh'
 alias ..='cd ..'
 alias ~='cd ~'
 alias psg='ps -fe | grep '
+
+# disable Ctrl-D to logout
+set -o ignoreeof
+export ignoreeof=10000
