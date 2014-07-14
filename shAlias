@@ -1,0 +1,8 @@
+# shell alias
+alias grep='grep --color=auto'
+alias ls='ls --color=tty'
+alias l='ls -lh'
+alias ll='ls -alh'
+alias ..='cd ..'
+alias ~='cd ~'
+alias psg='ps -fe | grep '
