@@ -1,67 +1,90 @@
-set nocompatible
+"
+" Vundle
+" https://github.com/gmarik/vundle
+"
 
-"plugin tool
-execute pathogen#infect()
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'gmarik/vundle'
+Plugin 'molokai'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'bufexplorer.zip'
+Plugin 'Mark'
+Plugin 'The-NERD-tree'
+Plugin 'matrix.vim'
+Plugin 'closetag.vim'
+Plugin 'The-NERD-Commenter'
+Plugin 'matchit.zip'
+Plugin 'AutoComplPop'
+Plugin 'jsbeautify'
+Plugin 'less.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+
+" Enable syntax highlighting
 syntax on
-filetype plugin indent on
+colorscheme molokai
 
-set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-set encoding=utf-8
-"show line number
+" Enable auto-indentation
+set autoindent
+filetype plugin indent on    " required
+
+" hit enter to cancel searched highlight
+noremap <CR> :nohlsearch<CR>
+
+let mapleader=","
 set nu
-"set a tab to four spaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+
+" use mouse at normal and visual status
+set mouse=nv
+
+" NERDTree setting
+nnoremap <silent> <F2> :NERDTreeToggle<CR>
+let NERDTreeShowBookmarks=0
+let NERDTreeChDirMode=2
+let NERDTreeMouseMode=2
+let g:nerdtree_tabs_focus_on_files=1
+let g:nerdtree_tabs_open_on_gui_startup=0
+" open directory of current opened file
+map <leader>r :NERDTreeFind<cr>
+map <leader>n :NERDTreeToggle<cr>
+
+" make nerdtree look nice
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
+let g:NERDTreeWinSize=30
+let NERDTreeIgnore=['\.pyc$']
+
+" Bash-style tab completion
+set wildmode=longest,list
+set wildmenu
+
+" Fix bad autoindent of pasted text
+set paste
+ 
+" Default to soft tabs, 2 spaces
 set expandtab
-"set auto indent
-set ai!
+set sw=2
+set sts=2
 
-if &term=="xterm"
-    set t_Co=8
-    set t_Sb=^[[4%dm
-    set t_Sf=^[[3%dm
-endif
-
-"set vim status
-set laststatus=2 "show status
-set statusline=
-"buffer number
-set statusline+=%2*%-3.3n%0*\
-"file name
-set statusline+=%f\
-"flag
-set statusline+=%h%1*%m%r%w%0*
-set statusline+=[
-if v:version >= 600
-    "filetype
-    set statusline+=%{strlen(&ft)?&ft:'none'},
-    "encoding
-    set statusline+=%{&fileencoding},
-endif
-"file format
-set statusline+=%{&fileformat}]
-"right align
-set statusline+=%=
-"current char
-"charset statusline+=%2*0x%-8B\
-set statusline+=0x%-8B\
-"offset
-set statusline+=%-14.(%l,%c,%v%)\ %<%P
-if filereadable(expand("$VIM/vimfile/plugin/vimbuddy.vim"))
-    "vim buddy
-    set statusline+=\ %{VimBuddy()}
-endif
-"status color
-highlight StatusLine guifg=StateBlue guibg=Yellow
-highlight StatusLineNC guifg=Gray guibg=White
-
-"tab shortcut
-map <F7> :NERDTreeToggle<cr>
-imap <F7> <ESC>:NERDTreeToggle<cr>
-map <C-l> :tabn<cr>
-map <C-h> :tabp<cr>
-map <C-n> :tabnew<cr>
-map <C-k> :bn<cr>
-map <C-j> :bp<cr>
-
+" comment
+map <leader><leader> <leader>c<space>
