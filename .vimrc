@@ -40,24 +40,9 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-
-" Enable syntax highlighting
-syntax on
-let &t_Co=256 "http://zeering.com/Answer.aspx?q=iterm%20vim%20colorscheme%20not%20working&i=149504
-colorscheme railscasts
-
-" Enable auto-indentation
-set autoindent
-filetype plugin indent on    " required
-
-" hit enter to cancel searched highlight
-noremap <CR> :nohlsearch<CR>
-
-let mapleader=","
-set nu
-
-" use mouse at normal and visual status
-set mouse=nv
+" =======================
+"  plugin configurations
+" =======================
 
 " NERDTree setting
 nnoremap <silent> <F2> :NERDTreeToggle<CR>
@@ -76,6 +61,39 @@ let NERDTreeDirArrows=1
 let g:NERDTreeWinSize=30
 let NERDTreeIgnore=['\.pyc$']
 
+" autoHEADER
+let g:autoHEADER_default_email="xiebin01@baidu.com"
+let g:autoHEADER_default_author="DestinyXie"
+let g:autoHEADER_fill_char_repeat = 78
+
+
+" ============
+"  custom key 
+" ============
+
+" not compatible with the old-fashion vi mode
+set nocompatible
+
+" Enable syntax highlighting
+syntax on
+
+" http://zeering.com/Answer.aspx?q=iterm%20vim%20colorscheme%20not%20working&i=149504
+let &t_Co=256 
+colorscheme railscasts
+
+" Enable auto-indentation
+set autoindent
+filetype plugin indent on    " required
+
+" hit enter to cancel searched highlight
+noremap <CR> :nohlsearch<CR>
+
+let mapleader=","
+set nu
+
+" use mouse at normal and visual status
+set mouse=nv
+
 " Bash-style tab completion
 set wildmode=longest,list
 set wildmenu
@@ -83,7 +101,7 @@ set wildmenu
 " Fix bad autoindent of pasted text
 set paste
 
-" Default to soft tabs, 2 spaces
+" Default to soft tabs, 4 spaces
 set expandtab
 set sw=4
 set sts=4
@@ -91,6 +109,13 @@ set sts=4
 " comment
 map <leader><leader> <leader>c<space>
 
-" autoHEADER
-let g:autoHEADER_default_email="xiebin01@baidu.com"
-let g:autoHEADER_default_author="DestinyXie"
+" next and prev tab
+noremap <F7> gT
+noremap <F8> gt
+
+" identation
+nmap <TAB> v>
+nmap <S-TAB> v<
+vmap <TAB> >gv
+vmap <S-TAB> <gv
+
