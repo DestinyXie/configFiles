@@ -11,7 +11,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'gmarik/vundle'
-Plugin 'molokai'
 Plugin 'L9'
 Plugin 'FuzzyFinder'
 Plugin 'bufexplorer.zip'
@@ -23,7 +22,9 @@ Plugin 'The-NERD-Commenter'
 Plugin 'matchit.zip'
 Plugin 'AutoComplPop'
 Plugin 'jsbeautify'
-Plugin 'less.vim'
+Plugin 'nginx.vim'
+Plugin 'SuperTab'
+Plugin 'shanzi/autoHEADER'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -42,7 +43,8 @@ call vundle#end()            " required
 
 " Enable syntax highlighting
 syntax on
-colorscheme molokai
+let &t_Co=256 "http://zeering.com/Answer.aspx?q=iterm%20vim%20colorscheme%20not%20working&i=149504
+colorscheme railscasts
 
 " Enable auto-indentation
 set autoindent
@@ -80,11 +82,15 @@ set wildmenu
 
 " Fix bad autoindent of pasted text
 set paste
- 
+
 " Default to soft tabs, 2 spaces
 set expandtab
-set sw=2
-set sts=2
+set sw=4
+set sts=4
 
 " comment
 map <leader><leader> <leader>c<space>
+
+" autoHEADER
+let g:autoHEADER_default_email="xiebin01@baidu.com"
+let g:autoHEADER_default_author="DestinyXie"
