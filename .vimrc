@@ -40,6 +40,65 @@ call vundle#end()            " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+
+
+" ============
+"  custom key 
+" ============
+
+" not compatible with the old-fashion vi mode
+set nocompatible
+
+" Enable syntax highlighting
+syntax on
+
+" http://zeering.com/Answer.aspx?q=iterm%20vim%20colorscheme%20not%20working&i=149504
+let &t_Co=256 
+colorscheme railscasts
+
+filetype plugin indent on    " required
+
+" hit enter to cancel searched highlight
+noremap <CR> :nohlsearch<CR>
+
+let mapleader=","
+set nu
+
+" Enable auto-indentation (useless)
+set autoindent
+
+" use mouse at normal and visual status
+set mouse=nv
+
+" Bash-style tab completion
+set wildmode=longest,list
+set wildmenu
+
+" Fix bad autoindent of pasted text
+set paste
+
+" no endless backup
+set nobackup
+
+" Default to soft tabs, 4 spaces
+set expandtab
+set sw=4
+set sts=4
+
+" comment
+map <leader><leader> <leader>c<space>
+
+" next and prev tab
+noremap <F7> gT
+noremap <F8> gt
+
+" identation
+nmap <TAB> v>
+nmap <S-TAB> v<
+vmap <TAB> >gv
+vmap <S-TAB> <gv
+
+
 " =======================
 "  plugin configurations
 " =======================
@@ -64,58 +123,4 @@ let NERDTreeIgnore=['\.pyc$']
 " autoHEADER
 let g:autoHEADER_default_email="xiebin01@baidu.com"
 let g:autoHEADER_default_author="DestinyXie"
-let g:autoHEADER_fill_char_repeat = 78
-
-
-" ============
-"  custom key 
-" ============
-
-" not compatible with the old-fashion vi mode
-set nocompatible
-
-" Enable syntax highlighting
-syntax on
-
-" http://zeering.com/Answer.aspx?q=iterm%20vim%20colorscheme%20not%20working&i=149504
-let &t_Co=256 
-colorscheme railscasts
-
-" Enable auto-indentation
-set autoindent
-filetype plugin indent on    " required
-
-" hit enter to cancel searched highlight
-noremap <CR> :nohlsearch<CR>
-
-let mapleader=","
-set nu
-
-" use mouse at normal and visual status
-set mouse=nv
-
-" Bash-style tab completion
-set wildmode=longest,list
-set wildmenu
-
-" Fix bad autoindent of pasted text
-set paste
-
-" Default to soft tabs, 4 spaces
-set expandtab
-set sw=4
-set sts=4
-
-" comment
-map <leader><leader> <leader>c<space>
-
-" next and prev tab
-noremap <F7> gT
-noremap <F8> gt
-
-" identation
-nmap <TAB> v>
-nmap <S-TAB> v<
-vmap <TAB> >gv
-vmap <S-TAB> <gv
-
+let g:autoHEADER_fill_char_repeat=78
