@@ -43,7 +43,7 @@ call vundle#end()            " required
 
 
 " ============
-"  custom key 
+"  custom key
 " ============
 
 " not compatible with the old-fashion vi mode
@@ -53,7 +53,7 @@ set nocompatible
 syntax on
 
 " http://zeering.com/Answer.aspx?q=iterm%20vim%20colorscheme%20not%20working&i=149504
-let &t_Co=256 
+let &t_Co=256
 colorscheme railscasts
 
 filetype plugin indent on    " required
@@ -98,6 +98,17 @@ nmap <S-TAB> v<
 vmap <TAB> >gv
 vmap <S-TAB> <gv
 
+" set list to display invisible characters, use tail space hightlight substitude eol:$
+" set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
+
+" hightlight tail space
+highlight WhitespaceEOL ctermbg=red guibg=red
+match WhitespaceEOL /\s\+$/
+
+" no BOM
+set nobomb
 
 " =======================
 "  plugin configurations
