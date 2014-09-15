@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'gmarik/vundle'
 Plugin 'L9'
-Plugin 'FuzzyFinder'
+Plugin 'ctrlp'
 Plugin 'bufexplorer.zip'
 Plugin 'Mark'
 Plugin 'The-NERD-tree'
@@ -138,9 +138,3 @@ let NERDTreeIgnore=['\.pyc$']
 let g:autoHEADER_default_email="xiebin01@baidu.com"
 let g:autoHEADER_default_author="DestinyXie"
 let g:autoHEADER_fill_char_repeat=78
-
-" FuzzyFinder
-noremap <leader>p :FufFile<CR>
-noremap <leader>b :FufBuffer<CR>
-noremap <leader>t :FufTaggedFile<CR>
-noremap <leader>g :FufTag<CR>
