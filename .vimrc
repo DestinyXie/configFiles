@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'gmarik/vundle'
 Plugin 'L9'
-Plugin 'ctrlp'
+Plugin 'ctrlp.vim'
 Plugin 'bufexplorer.zip'
 Plugin 'Mark'
 Plugin 'The-NERD-tree'
