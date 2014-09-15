@@ -110,6 +110,9 @@ match WhitespaceEOL /\s\+$/
 " no BOM
 set nobomb
 
+" gen HEADER
+noremap <leader>h :AutoHeader<CR>
+
 " =======================
 "  plugin configurations
 " =======================
@@ -135,3 +138,9 @@ let NERDTreeIgnore=['\.pyc$']
 let g:autoHEADER_default_email="xiebin01@baidu.com"
 let g:autoHEADER_default_author="DestinyXie"
 let g:autoHEADER_fill_char_repeat=78
+
+" FuzzyFinder
+noremap <leader>p :FufFile<CR>
+noremap <leader>b :FufBuffer<CR>
+noremap <leader>t :FufTaggedFile<CR>
+noremap <leader>g :FufTag<CR>

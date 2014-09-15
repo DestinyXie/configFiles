@@ -27,6 +27,9 @@ alias fra='forever restartall'
 alias fst='forever stop'
 alias fsta='forever stopall'
 
+# shell alias for edp
+alias up='edp bcs'
+
 # disable Ctrl-D to logout
 set -o ignoreeof
 export ignoreeof=10000
