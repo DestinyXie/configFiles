@@ -113,6 +113,11 @@ set nobomb
 " gen HEADER
 noremap <leader>h :AutoHeader<CR>
 
+" tab command
+command -nargs=* T tabedit <args>
+map <C-x> :tabclose<CR>
+map <C-n> :tabnew<CR>
+
 " =======================
 "  plugin configurations
 " =======================
