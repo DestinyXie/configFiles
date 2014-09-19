@@ -89,10 +89,6 @@ set sts=4
 " comment
 map <leader><leader> <leader>c<space>
 
-" next and prev tab
-noremap <F7> gT
-noremap <F8> gt
-
 " identation
 nmap <TAB> v>
 nmap <S-TAB> v<
@@ -111,12 +107,16 @@ match WhitespaceEOL /\s\+$/
 " no BOM
 set nobomb
 
-" gen HEADER
+" generate HEADER
 noremap <leader>h :AutoHeader<CR>
 
 " tab command
 command -nargs=* T tabedit <args>
 map <C-n> :tabnew<CR>
+" next and prev tab
+noremap <F7> gT
+noremap <F8> gt
+
 
 " =======================
 "  plugin configurations
@@ -127,17 +127,20 @@ nnoremap <silent> <F2> :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=0
 let NERDTreeChDirMode=2
 let NERDTreeMouseMode=2
+let NERDTreeQuitOnOpen=1
 let g:nerdtree_tabs_focus_on_files=1
 let g:nerdtree_tabs_open_on_gui_startup=0
 " open directory of current opened file
 map <leader>r :NERDTreeFind<cr>
 map <leader>n :NERDTreeToggle<cr>
-
 " make nerdtree look nice
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 let g:NERDTreeWinSize=30
 let NERDTreeIgnore=['\.pyc$']
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " autoHEADER
 let g:autoHEADER_default_email="xiebin01@baidu.com"
