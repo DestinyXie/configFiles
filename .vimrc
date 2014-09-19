@@ -13,6 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'gmarik/vundle'
 Plugin 'L9'
 Plugin 'ctrlp.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'bufexplorer.zip'
 Plugin 'Mark'
 Plugin 'The-NERD-tree'
@@ -115,7 +116,6 @@ noremap <leader>h :AutoHeader<CR>
 
 " tab command
 command -nargs=* T tabedit <args>
-map <C-x> :tabclose<CR>
 map <C-n> :tabnew<CR>
 
 " =======================
