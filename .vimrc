@@ -65,9 +65,6 @@ noremap <CR> :nohlsearch<CR>
 let mapleader=","
 set nu
 
-" Enable auto-indentation (useless)
-set autoindent
-
 " use mouse at normal and visual status
 set mouse=nv
 
@@ -75,8 +72,11 @@ set mouse=nv
 set wildmode=longest,list
 set wildmenu
 
-" Fix bad autoindent of pasted text
-set paste
+" Enable auto-indentation (useless)
+set autoindent
+
+" Fix bad autoindent of pasted text " set it when paste
+" set paste
 
 " no endless backup
 set nobackup
@@ -146,3 +146,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:autoHEADER_default_email="xiebin01@baidu.com"
 let g:autoHEADER_default_author="DestinyXie"
 let g:autoHEADER_fill_char_repeat=78
+
+" emmet
+let g:user_emmet_mode='a'
