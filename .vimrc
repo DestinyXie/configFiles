@@ -83,8 +83,8 @@ set nobackup
 
 " Default to soft tabs, 4 spaces
 set expandtab
-set sw=4
-set sts=4
+set sw=2
+set sts=2
 
 " comment
 map <leader><leader> <leader>c<space>
