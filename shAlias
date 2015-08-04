@@ -18,6 +18,7 @@ alias gs='git st'
 alias go='git oneline'
 alias ga='git add'
 alias gc='git ci -m'
+alias gb='git br'
 
 # forever commands
 alias fl='forever list'
