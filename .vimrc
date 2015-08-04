@@ -15,7 +15,7 @@ Plugin 'L9'
 Plugin 'ctrlp.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'bufexplorer.zip'
-Plugin 'Mark'
+" Plugin 'Mark'
 Plugin 'The-NERD-tree'
 Plugin 'matrix.vim'
 Plugin 'closetag.vim'
@@ -55,7 +55,7 @@ syntax on
 
 " http://zeering.com/Answer.aspx?q=iterm%20vim%20colorscheme%20not%20working&i=149504
 let &t_Co=256
-colorscheme railscasts
+colorscheme slate
 
 filetype plugin indent on    " required
 
