@@ -145,7 +145,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " autoHEADER
 let g:autoHEADER_default_email="xiebin01@baidu.com"
 let g:autoHEADER_default_author="DestinyXie"
-let g:autoHEADER_fill_char_repeat=78
+let g:autoHEADER_fill_char_repeat=0
 
 " emmet
 let g:user_emmet_mode='a'
