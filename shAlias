@@ -28,8 +28,12 @@ alias fra='forever restartall'
 alias fst='forever stop'
 alias fsta='forever stopall'
 
-# shell alias for edp
-alias up='edp bcs'
+# shell alias for baidubce-cli
+alias up='baidubce bos'
+alias upp='baidubce bos --put-object'
+alias ups='baidubce bos --put-superfile'
+alias upc='baidubce bos -c'
+alias upl='baidubce bos --list-objects'
 
 # disable Ctrl-D to logout
 set -o ignoreeof
