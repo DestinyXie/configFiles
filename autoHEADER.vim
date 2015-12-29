@@ -44,14 +44,14 @@ fun! s:insert_header_with_ft(ft)
             let start_line = 0
 
             let copyMessages=[[''],
-                        \ ['Copyright (c) 2014 Baidu.com, Inc. All Rights Reserved'],
+                        \ ['Copyright (c) 2016 desmix.com, Inc. All Rights Reserved'],
                         \ ['$ID: ' . s:filename . ' ' . strftime("%Y-%m-%d %H:%M:%S") . ' ' . g:autoHEADER_default_author],
                         \ ['']]
             " [s:filename.' ~ ' . '[AUTO_UPDATE_BEFORE_SAVE]']
-            let messages=[[s:filename.' ~ ' . strftime("%Y-%m-%d %H:%M:%S")],
-                        \ ['@author' , g:autoHEADER_default_email . ' (' . g:autoHEADER_default_author .')'],
+            let messages=[['@file' , s:filename.' ~ ' . strftime("%Y-%m-%d %H:%M:%S")],
+                        \ ['@author' , g:autoHEADER_default_author . ' (' . g:autoHEADER_default_email .')'],
                         \ ['@description'],
-                        \ [' ']]
+                        \ ['']]
 
             if  type(prefix) == type({})
                 let prefix_by_ft = get(prefix,a:ft)
@@ -62,25 +62,25 @@ fun! s:insert_header_with_ft(ft)
             endif
 
             " start of comment block
-            call append(start_line, style[0] . repeat(style[3], g:autoHEADER_fill_char_repeat))
-            let start_line += 1
+            "call append(start_line, style[0] . repeat(style[3], g:autoHEADER_fill_char_repeat))
+            "let start_line += 1
 
-            for message in copyMessages
-                call append(start_line, start_char . ' ' . printf('%s',get(message,0)))
-                let start_line += 1
-            endfor
+            "for message in copyMessages
+                "call append(start_line, start_char . ' ' . printf('%s',get(message,0)))
+                "let start_line += 1
+            "endfor
             
             " end of comment block
-            call append(start_line,' ' . repeat(style[3], g:autoHEADER_fill_char_repeat) . style[2])
-            let start_line += 1
+            "call append(start_line,' ' . repeat(style[3], g:autoHEADER_fill_char_repeat) . style[2])
+            "let start_line += 1
 
             " blank
-            call append(start_line, '')
-            let start_line += 1
-            call append(start_line, '')
-            let start_line += 1
-            call append(start_line, '')
-            let start_line += 1
+            "call append(start_line, '')
+            "let start_line += 1
+            "call append(start_line, '')
+            "let start_line += 1
+            "call append(start_line, '')
+            "let start_line += 1
 
             " start of comment block
             call append(start_line, style[0] . style[3])
@@ -98,7 +98,8 @@ fun! s:insert_header_with_ft(ft)
             let endline = start_line
 
             " end of comment block
-            call append(start_line,' ' . style[3] . style[2])
+            "call append(start_line,' ' . style[3] . style[2])
+            call append(start_line,' ' . style[2])
             let start_line += 1
 
             " appendix

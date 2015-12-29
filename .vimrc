@@ -143,7 +143,7 @@ let NERDTreeIgnore=['\.pyc$']
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " autoHEADER
-let g:autoHEADER_default_email="xiebin01@baidu.com"
+let g:autoHEADER_default_email="xber1986@gmail.com"
 let g:autoHEADER_default_author="DestinyXie"
 let g:autoHEADER_fill_char_repeat=0
 
