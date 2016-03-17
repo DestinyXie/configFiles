@@ -16,7 +16,7 @@ alias gplm='gpl master'
 alias gpsm='gps master'
 alias gd='git diff'
 alias gs='git st'
-alias go='git oneline'
+alias gol='git oneline'
 alias ga='git add'
 alias gc='git ci -m'
 alias gb='git br'
@@ -39,3 +39,6 @@ alias upl='baidubce bos --list-objects'
 # disable Ctrl-D to logout
 set -o ignoreeof
 export ignoreeof=10000
+
+# shell alias for webpack
+alias we='webpack --display-error-details'
