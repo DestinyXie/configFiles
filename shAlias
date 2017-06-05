@@ -24,9 +24,9 @@ alias gb='git br'
 
 # forever commands
 alias pl='pm2 list'
-alias ps='pm2 start'
+alias pms='pm2 start'
 alias pr='pm2 restart'
-alias pst='pm2 stop'
+alias pmst='pm2 stop'
 
 # disable Ctrl-D to logout
 set -o ignoreeof
