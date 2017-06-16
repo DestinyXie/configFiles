@@ -21,7 +21,7 @@ alias gol='git oneline'
 alias ga='git add'
 alias gc='git ci -m'
 alias gb='git br'
-alias gg='git add -A && git ci -m "auto ci" && git push origin master'
+alias gg='ga -A && gc "auto ci" && gpsm'
 
 # forever commands
 alias pl='pm2 list'
